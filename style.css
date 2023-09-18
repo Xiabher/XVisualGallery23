@@ -1,9 +1,24 @@
+/* Set appropriate breakpoints */
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* Set up grid layout */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
 }
 
+/* Style images */
 .gallery img {
   width: 100%;
   height: auto;
@@ -11,6 +26,7 @@
   cursor: pointer;
 }
 
+/* Set up modal */
 .modal {
   display: none;
   position: fixed;
